@@ -1,6 +1,6 @@
 CFLAGS=-std=c11 -g -static
 
-9cc: 9cc.c
+9cc-step2: 9cc-step2.c
 
 test: 9cc
 		./test.sh

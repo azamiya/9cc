@@ -5,7 +5,6 @@ int main(int argc, char **argv) {
 	printf(".intel_syntax noprefix\n");
 	printf(".global main\n");
 	printf("main:\n");
-	char *p = argv[1];
 	printf("	mov rax, 5\n");
 	printf("	add rax, 20\n");
 	printf("	sub rax, 4\n");

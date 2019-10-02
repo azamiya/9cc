@@ -1,6 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+typedef enum {
+	TK_NUM
+} TokenKind;
+
+typedef struct Token Token;
+
+struct Token {
+	TokenKind kind;
+};
+
+Token *tokenize(char *p){
+	Token head;
+	return head;
+};
+
 int main(int argc, char **argv) {
 	if (argc != 2) {
 		fprintf(stderr, "引数の個数が正しくありません\n");
@@ -10,6 +25,7 @@ int main(int argc, char **argv) {
 	printf(".intel_syntax noprefix\n");
 	printf(".global main\n");
 	printf("main:\n");
+	token = tokenize(argv[1]);
 
 	char *p = *(argv + 1);
 	printf("	mov rax, %ld\n", strtol(p, &p, 10));
